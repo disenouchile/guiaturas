@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -382,8 +383,7 @@
                     <div class="col-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
                         <h3 class="fs-5 mt-5 mb-4">Memorias de referencia</h3>
                         <p>
-                            Entre <em>julio de 2022 y julio de 2023</em> se presentaron a la Universidad de Chile <span id="todas"></span> memorias para optar al título profesional de Diseñador/a, con y sin menciones. Del total,
-                            <span id="sietes"></span> fueron aprobadas con nota máxima en su examen:
+                            Entre <em>julio de 2022 y julio de 2024</em>, <span id="sietes"></span> memorias han sido aprobadas con nota máxima en su examen:
                         </p>
                         <div class="table-responsive">
                             <table class="table table-hover align-top small">
@@ -436,9 +436,7 @@
             });
 
             const fila = document.querySelector("#filas");
-            let i = 1;
             let todas = 0;
-            let sietes = 0;
             Papa.parse("https://raw.githubusercontent.com/disenoUChile/guiaturas/main/data/memorias.csv", {
                 download: true,
                 header: true,
@@ -449,8 +447,6 @@
                             fila.innerHTML += `<tr><td>${d.author} (${d.year})</td><td><details><summary>${d.name}</summary>${fix(d.uri, d.title)}</details></td><td><a href="${
                                 d.tutor_profile
                             }" target="_blank" class="link-dark link-underline-opacity-10 link-underline-opacity-75-hover" title="Ver perfil en Portafolio Académico">Prof. ${d.tutor.split(",")[1]} ${d.tutor.split(",")[0]}</a></td></tr>`;
-                            i++;
-                            sietes++;
                         }
                         todas++;
                     });
@@ -465,8 +461,7 @@
                         return texto;
                     }
 
-                    document.querySelector("#todas").innerHTML = todas;
-                    document.querySelector("#sietes").innerHTML = sietes;
+                    document.querySelector("#sietes").innerHTML = todas;
                 },
             });
         </script>
