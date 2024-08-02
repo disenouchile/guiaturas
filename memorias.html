@@ -443,20 +443,18 @@
                 complete: function (results) {
                     console.log(results);
                     results.data.forEach((d) => {
-                        if (d.nota_examen == "7,0") {
                             fila.innerHTML += `<tr><td>${d.author} (${d.year})</td><td><details><summary>${d.name}</summary>${fix(d.uri, d.title)}</details></td><td><a href="${
                                 d.tutor_profile
                             }" target="_blank" class="link-dark link-underline-opacity-10 link-underline-opacity-75-hover" title="Ver perfil en Portafolio Académico">Prof. ${d.tutor.split(",")[1]} ${d.tutor.split(",")[0]}</a></td></tr>`;
-                        }
                         todas++;
                     });
 
                     function fix(x, y) {
                         var texto;
-                        if (x !== "") {
-                            texto = `<a href="${x}" target="_blank" class="link-secondary link-underline-opacity-10 link-underline-opacity-75-hover small" title="Ver en Repositorio Académico de la Universidad de Chile">${y} en el <em>Repositorio Académico de la Universidad de Chile</em></a>`;
+                        if (x.includes("http")) {
+                            texto = `<a href="${x}" target="_blank" class="link-secondary link-underline-opacity-10 link-underline-opacity-75-hover small" title="Ver en Repositorio Académico de la Universidad de Chile">${y}, disponible en el <em>Repositorio Académico de la Universidad de Chile</em></a>`;
                         } else {
-                            texto = `<span class="text-body-secondary small">Esta memoria aún no se encuentra en el Repositorio Académico de la Universidad de Chile</span>`;
+                            texto = `<span class="text-body-secondary small">Esta memoria aún no está disponible en el Repositorio Académico de la Universidad de Chile</span>`;
                         }
                         return texto;
                     }
