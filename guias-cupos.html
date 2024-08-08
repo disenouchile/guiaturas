@@ -37,7 +37,7 @@
         <div class="container pt-5">
             <div class="row">
                 <div class="col-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
-                    <h2 class="display mt-5 mb-4">Guías</h2>
+                    <h2 class="display mt-5 mb-4"><a href="guias.html" class="link-secondary link-opacity-75 link-offset-0 link-underline-opacity-25 link-underline-opacity-75-hover">Guías</a> con cupos</h2>
 
                     <div id="aviso"></div>
 
@@ -50,22 +50,21 @@
 
                     <p class="mx-3 text-body-secondary small">[Para Profesor(a) Guía de Proyecto de Título deben respetarse] los mismos criterios definidos en artículo 9 (Art 27).</p>
 
-                    <p>Esta dirección puede ser directa o indirecta. Cuando la responsabilidad de la tutela es directa, cada tutor(a) cumple el rol de <em>Prof. Guía</em>.</p>
-
-                    <p>Cumpliendo con jerarquía y adscripción reglamentadas, cada Prof. Guía también puede cumplir el rol de <em>Prof. Guía 1</em>, haciendo una tutela indirecta gracias a un(a) <em>Prof. Guía 2</em>.</p>
-
-                    <p>
-                        En segundo semestre del año 2024, son <span class="guia-1">34</span><span class="guia-2 d-none">10</span> quienes cumplen el rol de
-                        <select id="roles" class="form-select form-select-sm" style="display: inline-block; width: 14rem; border: none; font-size: 0.95rem; background-color: #fff;">
-                            <option value="1">Prof. Guía o Prof. Guía 1</option>
-                            <option value="2">Prof. Guía 2</option>
-                        </select>
-                    </p>
-                    <p>Es importante aclarar que el hecho de estar cumpliendo el rol no implica la <a href="guias-cupos.html" class="link-dark">disponibilidad de cupos</a> para más guiadas/os. Esto porque todos sus cupos podrían estar dedicados a la continuidad de sus guiadas/os desde el primer semestre de 2024.</p>
+                    <p>A continuación se indican las alternativas de Prof. Guía para iniciar Seminario de Título o Proyecto de título en segundo semestre de 2024.</p>
                 </div>
             </div>
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3" id="aqui"></div>
-
+            <div class="row">
+                <div class="col-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
+                    <h3 class="text-center fs-4 my-3">11 para Seminario de Licenciatura I</h3>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3" id="sem"></div>
+            <div class="row">
+                <div class="col-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
+                    <h3 class="text-center fs-4 mt-5 mb-3">11 para Proyecto de Título I</h3>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3" id="tit"></div>
             <div class="pt-5">
                 <div class="container">
                     <div class="row">
@@ -108,8 +107,9 @@
             var soloSeminarioOK;
             var soloTituloOK;
 
-            const aqui = document.querySelector("#aqui");
-            const seleccionado = document.querySelector("#verCupos");
+            const los_seminarios = document.querySelector("#sem");
+            const los_titulos = document.querySelector("#tit");
+
 
             Papa.parse("https://raw.githubusercontent.com/disenoUChile/guiaturas/main/data/data-a-mano.csv", {
                 download: true,
@@ -137,11 +137,27 @@
                     console.log(soloTituloOK);
 
 
+
                     //UNA FUNCIÓN QUE PREFIERO DEJAR ACÁ
 
                     function construye(data) {
-                        data.forEach((d) => {
-                            aqui.innerHTML += `
+                        soloSeminario.forEach((d) => {
+                            los_seminarios.innerHTML += `
+                            <article class="col my-3 ${claseRol(d.nivel)}">
+                                <div class="card shadow-sm h-100">
+                                  <div class="card-header">
+                                    <h1 class="fs-5 mt-2">${nombre(d.name)}</h1>
+                                    <p>${d.nivel} ${d.adscripcion}</p>
+                                    <p>${link(d.perfil)}</p>
+                                  </div>
+                                  <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><p class='text-body-secondary mb-3' style="min-height:6rem">${d.descriptor}</p></li>
+                                  </ul>
+                                </div>
+                              </article>`;
+                        });
+                        soloTitulo.forEach((d) => {
+                            los_titulos.innerHTML += `
                             <article class="col my-3 ${claseRol(d.nivel)}">
                                 <div class="card shadow-sm h-100">
                                   <div class="card-header">
@@ -152,16 +168,10 @@
                                   <ul class="list-group list-group-flush">
                                     <li class="list-group-item"><p class='text-body-secondary mb-1' style="min-height:6rem">${d.descriptor}</p></li>
                                   </ul>
-                                  <div class="card-body small">
-                                    ${areas(d.areas)}
-                                    <p>Atendiendo a las <a href="https://fau.uchile.cl/diseno/investigacion/investigacion" target="_blank" class="link-dark link-underline-opacity-10 link-underline-opacity-75-hover">Líneas de Investigación del Departamento de Diseño</a>, se relaciona con:</p>
-                                    <ul>${lineas(d.lineas)}</ul>
-                                    <p class="text">Y atendiendo a los posibles énfasis del Ciclo 3 del Plan de Estudios del Programa Académico, se relaciona con:</p>
-                                    <ul>${enfasis(d.enfasis)}</ul>
-                                  </div>
                                 </div>
                               </article>`;
                         });
+
                     }
 
                     construye(todosOK);
