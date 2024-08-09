@@ -55,13 +55,13 @@
             </div>
             <div class="row">
                 <div class="col-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
-                    <h3 class="text-center fs-4 mt-4 mb-3">12 para Seminario de Licenciatura I</h3>
+                    <h3 class="text-center fs-4 mt-5 mb-3">Son <span id="profesensem"></span> para Seminario de Licenciatura I</h3>
                 </div>
             </div>
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3" id="sem"></div>
             <div class="row">
                 <div class="col-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
-                    <h3 class="text-center fs-4 mt-5 mb-3">12 para Proyecto de Título I</h3>
+                    <h3 class="text-center fs-4 mt-5 mb-3">Son <span id="profesentit"></span> para Proyecto de Título I</h3>
                 </div>
             </div>
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3" id="tit"></div>
@@ -109,6 +109,9 @@
 
             const los_seminarios = document.querySelector("#sem");
             const los_titulos = document.querySelector("#tit");
+            
+            const nro_seminarios = document.querySelector("#profesensem");
+            const nro_titulos = document.querySelector("#profesentit");
 
 
             Papa.parse("https://raw.githubusercontent.com/disenoUChile/guiaturas/main/data/data-a-mano.csv", {
@@ -129,12 +132,8 @@
                     });
 
                     todosOK = todos.slice(0, -1);
-                    soloSeminarioOK = soloSeminario.slice(0, -1);
-                    soloTituloOK = soloTitulo.slice(0, -1);
 
                     console.log(todosOK);
-                    console.log(soloSeminarioOK);
-                    console.log(soloTituloOK);
 
 
 
@@ -172,6 +171,10 @@
                               </article>`;
                         });
 
+                        nro_seminarios.innerHTML = soloSeminario.length;
+
+                        nro_titulos.innerHTML = soloTitulo.length;
+
                     }
 
                     construye(todosOK);
@@ -197,61 +200,6 @@
                 }
             }
 
-            function areas(x) {
-                if(x){
-                    let a = "";
-                    if (x.includes(1)) { a += "<li>Área Prioritaria 1. Sistemas físicos, naturales y cambios ambientales</li>" }
-                    if (x.includes(2)) { a += "<li>Área Prioritaria 2. Dimensiones socioecológicas en el territorio</li>" }
-                    if (x.includes(3)) { a += "<li>Área Prioritaria 3. Asentamientos, movilidades y orgánicas comunitarias</li>" }
-                    if (x.includes(4)) { a += "<li>Área Prioritaria 4. Dinámicas y transformaciones morfológicas, urbanas y rurales</li>" }
-                    if (x.includes(5)) { a += "<li>Área Prioritaria 5. Creación, innovación proyectual y desarrollos tecnológicos</li>" }
-                    if (x.includes(6)) { a += "<li>Área Prioritaria 6. Conservación e intervención de obras, entornos y ciudades patrimoniales</li>" }
-                    if (x.includes(7)) { a += "<li>Área Prioritaria 7. Culturas visuales, materiales-inmateriales y mediales</li>" }
-                    if (x.includes(8)) { a += "<li>Área Prioritaria 8. Fenómenos sensibles, perceptuales y corporales en el entorno</li>" }
-                    return "<p>Atendiendo al <a href='https://fau.uchile.cl/investigacion/investigacion-en-la-facultad/areas-prioritarias-de-investigacion' target='_blank' class='link-dark link-underline-opacity-10 link-underline-opacity-75-hover'>quehacer en investigación y creación de la Facultad de Arquitectura y Urbanismo</a>, se relaciona con:</p><ul>" + a + "</ul>"
-                } else {
-                    return "";
-                }
-            }
-
-            function lineas(x) {
-                let lineas = "";
-                    if (x.includes("1")) {
-                        lineas += "<li>Diseño centrado en la persona</li>";
-                    }
-                    if (x.includes("2")) {
-                        lineas += "<li>Materiales, Tecnologías y Procesos</li>";
-                    }
-                    if (x.includes("3")) {
-                        lineas += "<li>Morfología, Percepción y Color</li>";
-                    }
-                    if (x.includes("4")) {
-                        lineas += "<li>Identidad y Patrimonio</li>";
-                    }
-                    if (x.includes("5")) {
-                        lineas += "<li>Estudios Visuales y Mediales</li>";
-                    }
-                    if (x.includes("6")) {
-                        lineas += "<li>Diseño Editorial y Tipografía</li>";
-                    }
-                return lineas;
-            }
-
-
-            function enfasis(x) {
-                let enfatico = "";
-                if (x.includes("1")) {
-                    enfatico += "<li>Innovación</li>";
-                }
-                if (x.includes("2")) {
-                    enfatico += "<li>Investigación</li>";
-                }
-                if (x.includes("3")) {
-                    enfatico += "<li>Creación</li>";
-                }
-                return enfatico;
-            }
-
             function claseRol(x) {
                 if (x.includes("Prof.") || x.includes("jerarquización")) {
                     return "guia-1";
@@ -261,24 +209,6 @@
             }
 
 
-            document.querySelector("#roles").addEventListener("change", (event) => {
-                const unos = document.querySelectorAll(".guia-1");
-                const otros = document.querySelectorAll(".guia-2");
-
-                if(event.target.value == 1){
-
-                    unos.forEach(u=> u.classList.remove("d-none"));
-                    otros.forEach(u=> u.classList.add("d-none"));
-
-                } else {
-
-                    unos.forEach(u=> u.classList.add("d-none"));
-                    otros.forEach(u=> u.classList.remove("d-none"));
-
-                }
-
-                datos().catch((error) => console.error(error));
-            });
         </script>
     </body>
 </html>
