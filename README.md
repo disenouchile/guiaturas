@@ -9,4 +9,4 @@ El [sitio web](https://disenouchile.github.io/guiaturas/) publicado desde este r
 
 Seminario corresponde al 4to. año del plan de estudios y tiene énfasis académico. Mientras que el Título corresponde al 5to. año y tiene énfasis profesional (sea por vía de la creación, la innovación o la investigación).
 
-**Marzo, 2024.**
+**Actualizado en enero de 2025.**
