@@ -149,7 +149,7 @@
                                 </div>
                               </article>`;
 
-                            if (d.nivel.includes("Prof.") || d.nivel.includes("jerarquización")) {
+                            if (d.nivel.includes("Prof.")) {
                                 prof1 = prof1 + 1;
                             } else {
                                 prof2 = prof2 + 1;
@@ -244,7 +244,7 @@
             }
 
             function claseRol(x) {
-                if (x.includes("Prof.") || x.includes("jerarquización")) {
+                if (x.includes("Prof.")) {
                     return "guia-1";
                 } else {
                     return "guia-2 d-none";
