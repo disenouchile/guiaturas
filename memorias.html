@@ -332,7 +332,7 @@
                 <div class="row">
                     <div class="col-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
                         <h3 class="fs-5 mt-5 mb-4">Memorias de referencia</h3>
-                        <p>Ya se han presentado un poco más de 150 memorias para optar al título profesional de Diseñador/a, Diseñador/a con mención en Visualidad y Medios, o Diseñador/a con mención Industrial y Servicios. Entre todas las presentadas, son <span id="sietes"></span> las que han sido evaluadas con nota máxima en su examen:
+                        <p>Se cuentan 209 Exámenes de Títulos aprobados entre el segundo semestre del año 2021 y el segundo semestre de 2024. Entre tales exámenes hay <span id="sietes"></span> aprobados con nota máxima:
                         </p>
                         <div class="table-responsive">
                             <table class="table table-hover align-top small">
@@ -392,18 +392,41 @@
                 complete: function (results) {
                     console.log(results);
                     results.data.forEach((d) => {
-                            fila.innerHTML += `<tr><td>${d.author} (${d.year})</td><td><details><summary>${d.name}</summary>${fix(d.uri, d.title)}</details></td><td><a href="${
-                                d.tutor_profile
-                            }" target="_blank" class="link-dark link-underline-opacity-10 link-underline-opacity-75-hover" title="Ver perfil en Portafolio Académico">Prof. ${d.tutor.split(",")[1]} ${d.tutor.split(",")[0]}</a></td></tr>`;
-                        todas++;
+                            fila.innerHTML += `<tr>
+                            <td>${d.author} (${d.year})</td>
+                            <td><details><summary>${d.name}</summary>${fix(d.uri, d.title)}</details></td>
+                            <td>${guia(d.tutor_profile, d.tutor)} ${coguia(d.cotutor)} </td></tr>`;
+                        todas++; 
                     });
 
+                    
+
                     function fix(x, y) {
-                        var texto;
+                        let texto;
                         if (x.includes("http")) {
                             texto = `<a href="${x}" target="_blank" class="link-secondary link-underline-opacity-10 link-underline-opacity-75-hover small" title="Ver en Repositorio Académico de la Universidad de Chile">${y}, disponible en el <em>Repositorio Académico de la Universidad de Chile</em></a>`;
                         } else {
                             texto = `<span class="text-body-secondary small">Esta memoria aún no está disponible en el Repositorio Académico de la Universidad de Chile</span>`;
+                        }
+                        return texto;
+                    }
+
+                    function guia(x, y) {
+                        let texto;
+                        if (x){
+                            texto = `<a href="${x}" target="_blank" class="link-dark link-underline-opacity-10 link-underline-opacity-75-hover" title="Ver perfil en Portafolio Académico">Prof. ${y.split(",")[1]} ${y.split(",")[0]}</a>`
+                        } else {
+                            texto = `Prof. ${y.split(",")[1]} ${y.split(",")[0]}`
+                        }
+                        return texto;
+                    }
+
+                    function coguia(x) {
+                        let texto;
+                        if (x){
+                            texto = ` & Prof. ${x.split(",")[1]} ${x.split(",")[0]}</a>`
+                        } else {
+                            texto = ``
                         }
                         return texto;
                     }
