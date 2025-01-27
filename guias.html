@@ -53,19 +53,17 @@
 
                     <p>La dirección debe ser directa en Seminario de Licenciatura I, Seminario de Licenciatura II y en Proyecto de Título II. Puede ser indirecta sólo en Proyecto de Título I.</p> 
 
-                    <p>Al ser directa, se cuenta con un/a Prof. Guía que se ajusta a lo reglamentado. Cuando es indirecta se cuenta con dos: Prof. Guía 1, ajustándose a lo reglamentado, y Prof. Guía 2, quien participa de las reuniones semanales e informa sobre avances a quien dirige el trabajo.</p>
+                    <p>Al ser directa, se cuenta con un/a Prof. Guía que se ajusta a lo reglamentado. Pero cuando es indirecta se cuenta con dos: Prof. Guía 1, ajustándose a lo reglamentado, y Prof. Guía 2, quien participa de las reuniones semanales e informa sobre avances a quien tutela el trabajo en Proyecto de Título I y continuará tutelándolo en Proyecto de Título II.</p>
 
                     <p>
-                        En primer semestre de 2025, son <span class="guia-1">35</span><span class="guia-2 d-none">4</span> quienes cumplen el rol de
-                        <select id="roles" class="form-select form-select-sm" style="display: inline-block; width: 14rem; border: none; font-size: 0.95rem; background-color: #fff;">
+                        En primer semestre de 2025, son <span id="guia1" class="guia-1">35</span><span id="guia2" class="guia-2 d-none">4</span> quienes podrían cumplir el rol de <select id="roles" class="form-select form-select-sm" style="display: inline-block; width: 14rem; border: none; font-size: 0.95rem; background-color: #fff;">
                             <option value="1">Prof. Guía o Prof. Guía 1</option>
                             <option value="2">Prof. Guía 2</option>
                         </select>
                     </p>
-                    <p>Es importante aclarar que el hecho de estar cumpliendo el rol no implica la <a href="guias-cupos.html" class="link-dark">disponibilidad de cupos</a>, cuando todos los cupos podrían estar dedicados a la continuidad del trabajo tutelado.</p>
                 </div>
             </div>
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mt-4" id="aqui"></div>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 mt-4 small" id="aqui"></div>
 
             <div class="pt-5">
                 <div class="container">
@@ -103,11 +101,7 @@
             });
 
             var todos = [];
-            var soloSeminario = [];
-            var soloTitulo = [];
             var todosOK;
-            var soloSeminarioOK;
-            var soloTituloOK;
 
             const aqui = document.querySelector("#aqui");
             const seleccionado = document.querySelector("#verCupos");
@@ -124,8 +118,10 @@
                     });
 
                     todosOK = todos.slice(0, -1);
-
                     console.log(todosOK);
+
+                    var prof1 = 0;
+                    var prof2 = 0;
 
 
                     //UNA FUNCIÓN QUE PREFIERO DEJAR ACÁ
@@ -136,12 +132,12 @@
                             <article class="col my-3 ${claseRol(d.nivel)}">
                                 <div class="card shadow-sm h-100 rounded-0 border-light-subtle">
                                   <div class="card-header">
-                                    <h1 class="fs-5 mt-2">${nombre(d.name)}</h1>
+                                    <h1 class="fs-6 mt-2">${nombre(d.name)}</h1>
                                     <p>${d.nivel} ${d.adscripcion}</p>
                                     <p class="small">${link(d.perfil, d.linkedin)}</p>
                                   </div>
                                   <ul class="list-group list-group-flush">
-                                    <li class="list-group-item"><p class='text-body-secondary mb-1' style="min-height:6rem">${d.descriptor}</p></li>
+                                    <li class="list-group-item"><p class='text-body-secondary mb-1' style="min-height:4rem">${d.descriptor}</p></li>
                                   </ul>
                                   <div class="card-body small">
                                     ${areas(d.areas)}
@@ -152,10 +148,20 @@
                                   </div>
                                 </div>
                               </article>`;
+
+                            if (d.nivel.includes("Prof.") || d.nivel.includes("jerarquización")) {
+                                prof1 = prof1 + 1;
+                            } else {
+                                prof2 = prof2 + 1;
+                            }
                         });
                     }
 
                     construye(todosOK);
+                    console.log(prof1);
+                    console.log(prof2);
+                    document.getElementById("guia1").innerHTML = prof1;
+                    document.getElementById("guia2").innerHTML = prof2;                    
                 },
             });
 
