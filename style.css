@@ -3,6 +3,18 @@ em {
     font-weight: 500;
 }
 
+.aviso{
+    background-color: #e3edf6;
+    margin-left:-1rem;
+    margin-right:-1rem;
+    padding:.6rem 1rem;
+}
+
+.aviso p, .aviso select{
+    font-size:96%;
+}
+
+
 .text-body-secondary{
     font-size:95%;
 }
