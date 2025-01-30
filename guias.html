@@ -8,6 +8,11 @@
         <title>DISEÑO — GUIATURAS</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
         <link href="style.css" rel="stylesheet" />
+        <style>
+            @media (orientation: landscape) {
+                li.list-group-item > p {min-height:5rem;}
+            }
+        </style>
     </head>
     <body class="bg-light">
         <nav class="fixed-top bg-light" style="opacity: 0.95;">
@@ -133,11 +138,11 @@
                                 <div class="card shadow-sm h-100 rounded-0 border-light-subtle">
                                   <div class="card-header">
                                     <h1 class="fs-6 mt-2">${nombre(d.name)}</h1>
-                                    <p>${d.nivel} ${d.adscripcion}</p>
+                                    <p class="my-1">${d.nivel} ${d.adscripcion}</p>
                                     <p class="small">${link(d.perfil, d.linkedin)}</p>
                                   </div>
                                   <ul class="list-group list-group-flush">
-                                    <li class="list-group-item"><p class='text-body-secondary mb-1' style="min-height:4rem">${d.descriptor}</p></li>
+                                    <li class="list-group-item"><p class='text-body-secondary mb-1'>${d.descriptor}</p></li>
                                   </ul>
                                   <div class="card-body small">
                                     ${areas(d.areas)}
