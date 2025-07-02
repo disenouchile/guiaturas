@@ -15,7 +15,7 @@
         "seccion": "AUD10I01-02 Proyecto de Título II",
         "guia": "Castillo Espinoza, Eduardo",
         "titulo": "Voz y Gráfica: Redescubriendo el patrimonio cultural Sanbernardino",
-        "lineas": 4,
+        "lineas": "4",
         "areas": "2 6 7",
         "keywords": "Patrimonio, Educación, Muralismo"
     },
@@ -55,7 +55,7 @@
         "seccion": "AUD10V01-03 Proyecto de Título II",
         "guia": "Cortez Orellana, Felipe",
         "titulo": "Nock Point: Diseño de encuentro universitario de Arquería.",
-        "lineas": 1,
+        "lineas": "1",
         "areas": "3 5 7",
         "keywords": "Arquería, Estudiantes Universitarios, Diseño de experiencia."
     },
@@ -65,8 +65,8 @@
         "seccion": "AUD10I01-04 Proyecto de Título II",
         "guia": "Domínguez González, Pablo",
         "titulo": "Set multisensorial a partir de sensaciones y recuerdos que experimentan adultos mayores al momento de tomar once.",
-        "lineas": 1,
-        "areas": 8,
+        "lineas": "1",
+        "areas": "8",
         "keywords": "Estimulación multisensorial, Tradición, Adulto mayor, Once"
     },
     {
@@ -75,7 +75,7 @@
         "seccion": "AUD10I01-04 Proyecto de Título II",
         "guia": "Domínguez González, Pablo",
         "titulo": "Aplicación de geotextil basado en corteza de eucaliptus globulus en la comunidad de Juan Fernández con el fin de combatir el desarrollo erosivo mediante la reforestación.",
-        "lineas": 2,
+        "lineas": "2",
         "areas": "1 2 5",
         "keywords": "Juan Fernández, Reforestación, Erosión, Biomateriales, Comunidad local"
     },
@@ -86,7 +86,7 @@
         "guia": "Domínguez González, Pablo",
         "titulo": "diseño de un dispositivo de simulación clínica de abordaje transesfenoidal",
         "lineas": "1 2",
-        "areas": 5,
+        "areas": "5",
         "keywords": "Dispositivos médicos, diseño de productos, diseño industrial"
     },
     {
@@ -95,8 +95,8 @@
         "seccion": "AUD10I01-04 Proyecto de Título II",
         "guia": "Domínguez González, Pablo",
         "titulo": "Herramientas para la extracción de avíos textiles",
-        "lineas": 2,
-        "areas": 5,
+        "lineas": "2",
+        "areas": "5",
         "keywords": "Reciclaje textil, extracción, avíos, herramientas"
     },
     {
@@ -116,7 +116,7 @@
         "guia": "Domínguez González, Pablo",
         "titulo": "Del briefing a la implementación: diseño de un sistema de exhibición para DKNY Body Mist en tiendas departamentales",
         "lineas": "2 3",
-        "areas": 7,
+        "areas": "7",
         "keywords": "Diseño experencial, retail chileno, exhibidor estrategico"
     },
     {
@@ -125,8 +125,8 @@
         "seccion": "AUD10I01-04 Proyecto de Título II",
         "guia": "Domínguez González, Pablo",
         "titulo": "Diseño de un Carro de Transferencia Motorizado para el Transporte de Metal Fundido en Fundición Las Rosas: Análisis y Desarrollo de Propuesta de Diseño bajo Condiciones Operativas Reales",
-        "lineas": 2,
-        "areas": 5,
+        "lineas": "2",
+        "areas": "5",
         "keywords": "Carro de Transferencia, Metal Fundido, Fundición Industrial, Optimización Operativa"
     },
     {
@@ -135,7 +135,7 @@
         "seccion": "AUD10I01-04 Proyecto de Título II",
         "guia": "Domínguez González, Pablo",
         "titulo": "Diseño de una interfaz móvil para fomentar la adaptabilidad de jóvenes en viviendas compartidas mediante el redescubrimiento del hogar",
-        "lineas": 1,
+        "lineas": "1",
         "areas": "3 5 8",
         "keywords": "Diseño de interfaz móvil, adaptabilidad emocional, compañeros de vivienda"
     },
@@ -145,8 +145,8 @@
         "seccion": "AUD10I01-05 Proyecto de Título II",
         "guia": "Donoso Cisternas, Sergio",
         "titulo": "El diseño como mediador emocional: desarrollo de un humificador-expositor portátil para la conservación de ingredientes y la conexión con clientes de ferias gastronómicas",
-        "lineas": 1,
-        "areas": 8,
+        "lineas": "1",
+        "areas": "8",
         "keywords": "Gastronomía, Emprendimiento, Interacción, Experiencia"
     },
     {
@@ -185,8 +185,8 @@
         "seccion": "AUD10V01-07 Proyecto de Título II",
         "guia": "Gatica Ramirez, Pamela",
         "titulo": "Tormenta interna",
-        "lineas": 5,
-        "areas": 8,
+        "lineas": "5",
+        "areas": "8",
         "keywords": "Endometriosis, resilencia, autocontrol, invisibilidad"
     },
     {
@@ -205,8 +205,8 @@
         "seccion": "AUD10I01-14 Proyecto de Título II",
         "guia": "Lares López, Lorna",
         "titulo": "Calzado infantil: Creciente y personalizable",
-        "lineas": 1,
-        "areas": 5,
+        "lineas": "1",
+        "areas": "5",
         "keywords": "sustentabilidad, calzado infantil"
     },
     {
@@ -215,8 +215,8 @@
         "seccion": "AUD10I01-14 Proyecto de Título II",
         "guia": "Lares López, Lorna",
         "titulo": "Diseño de un producto biofílico para apoyar la meditación y la respiración en personas con ansiedad en contextos domésticos urbanos",
-        "lineas": 1,
-        "areas": 5,
+        "lineas": "1",
+        "areas": "5",
         "keywords": "Diseño biofílico, Meditación guiada, Ansiedad"
     },
     {
@@ -226,7 +226,7 @@
         "guia": "Maldonado De la Fuente, Felix",
         "titulo": "Mobiliario modular para viviendas de carácter pequeño",
         "lineas": "1 2",
-        "areas": 5,
+        "areas": "5",
         "keywords": "Mobiliario, Modularidad, Vivienda, Adaptabilidad"
     },
     {
@@ -286,7 +286,7 @@
         "guia": "Nuñez Gutiérrez, Pablo",
         "titulo": "El Poncho: tradición textil mapuche en la moda actual",
         "lineas": "2 4",
-        "areas": 5,
+        "areas": "5",
         "keywords": "poncho mapuche, artesanía, diseño contemporáneo, resignificación"
     },
     {
@@ -326,7 +326,7 @@
         "guia": "Ode Saleh, Verónica",
         "titulo": "Melotecario: Publicación de autoconocimiento que busca la valorización musical en el coleccionismo",
         "lineas": "1 6",
-        "areas": 7,
+        "areas": "7",
         "keywords": "Coleccionismo, Música, Diseño Emocional, Diseño Editorial"
     },
     {
@@ -335,7 +335,7 @@
         "seccion": "AUD10V01-10 Proyecto de Título II",
         "guia": "Ode Saleh, Verónica",
         "titulo": "Memoria Batina: la construcción de la identidad peñaflorina",
-        "lineas": 4,
+        "lineas": "4",
         "areas": "6 7",
         "keywords": "Memoria, Patrimonio, Bata, Archivo"
     },
@@ -356,7 +356,7 @@
         "guia": "Ode Saleh, Verónica",
         "titulo": "Redescubirnedo el Barrio Brasil, una mirada sobre la percepción del territorio.",
         "lineas": "4 5 6",
-        "areas": 7,
+        "areas": "7",
         "keywords": "imaginario urbano, etnografía visual, fotografía, identidad"
     },
     {
@@ -376,7 +376,7 @@
         "guia": "Pagueguy Fenner, Sebastián",
         "titulo": "Inmersiva - Un Viaje Personal en la Animación",
         "lineas": "1 3 5",
-        "areas": 7,
+        "areas": "7",
         "keywords": "Animación, Introspección, Ilustración."
     },
     {
@@ -385,7 +385,7 @@
         "seccion": "AUD10I01-11 Proyecto de Título II",
         "guia": "Perea Morales, René",
         "titulo": "Creando una comunidad sostenible: Gestión y manejo de residuos sólidos domiciliarios en la comuna de Cerro Navia",
-        "lineas": 1,
+        "lineas": "1",
         "areas": "2 3",
         "keywords": "Residuos, reciclaje, gestión, comunidad"
     },
@@ -395,7 +395,7 @@
         "seccion": "AUD10V01-12 Proyecto de Título II",
         "guia": "Perelli Soto, Bruno",
         "titulo": "Soportes performaticos para la no imagen",
-        "lineas": 5,
+        "lineas": "5",
         "areas": "5 7",
         "keywords": "no imagen, performance, meme"
     },
@@ -416,7 +416,7 @@
         "guia": "Perelli Soto, Bruno",
         "titulo": "Trovador: del relato a la realidad. Experimentación con Juegos de rol como soporte narrativo para intervenciones psicoterapéuticas",
         "lineas": "1 6",
-        "areas": 8,
+        "areas": "8",
         "keywords": "Fenómenos liminales, juegos de rol, terapia narrativa, diseño de juegos"
     },
     {
@@ -436,7 +436,7 @@
         "guia": "Perelli Soto, Bruno",
         "titulo": "El carnaval popular como medio anarchivistico para la creación de nuevas narrativas comunes.",
         "lineas": "4 5",
-        "areas": 7,
+        "areas": "7",
         "keywords": "Narrativas, Performatividad, Anarchivismo, Cultura Popular"
     },
     {
@@ -446,7 +446,7 @@
         "guia": "Pradenas Guentherodt, Gabriela",
         "titulo": "Plantas Tintóreas del Sur de Chile: Patrimonio Cromático y Cultural en el Oficio Artesano",
         "lineas": "3 4 6",
-        "areas": 7,
+        "areas": "7",
         "keywords": "Plantas tintóreas, patrimonio cultural, tecnicas ancestrales, pigmentos naturales"
     },
     {
@@ -455,7 +455,7 @@
         "seccion": "AUD10V01-13 Proyecto de Título II",
         "guia": "Pradenas Guentherodt, Gabriela",
         "titulo": "CRAFTAS: ESPACIO DE RE-CREACIÓN DISEÑO DE UN SERVICIO DE TALLERES CRAFT PARA MUJERES",
-        "lineas": 1,
+        "lineas": "1",
         "areas": "5 7",
         "keywords": "diseño de servicios, fotobordado, espacios de recreación, diseño centrado en el usuario"
     },
@@ -465,8 +465,8 @@
         "seccion": "AUD10V01-13 Proyecto de Título II",
         "guia": "Pradenas Guentherodt, Gabriela",
         "titulo": "Creación de un cuadernillo para apoyar a familiares/cuidadores de pacientes con Alzheimer en las etapas leves y avanzadas",
-        "lineas": 1,
-        "areas": 8,
+        "lineas": "1",
+        "areas": "8",
         "keywords": "Cuidador,Alzheimer,Herramientas visuales"
     },
     {
@@ -486,7 +486,7 @@
         "guia": "Soto Calquin, Leonardo",
         "titulo": "ReMemori: memorial virtual como puente entre la conmemoración íntima y el legado transgeneracional",
         "lineas": "1 5",
-        "areas": 5,
+        "areas": "5",
         "keywords": "Memorial digital, duelo, conmemoración, plataformas virtuales"
     },
     {
@@ -496,7 +496,7 @@
         "guia": "Soto Calquin, Leonardo",
         "titulo": "Rediseño de identidad para una promoción de lucha libre chilena y su sub-marca televisiva",
         "lineas": "5 6",
-        "areas": 5,
+        "areas": "5",
         "keywords": "Lucha libre, identidad corporativa, endorser brand, rediseño de identidad corporativa"
     },
     {
@@ -505,7 +505,7 @@
         "seccion": "AUD10V01-14 Proyecto de Título II",
         "guia": "Soto Calquin, Leonardo",
         "titulo": "Las marcas en nuestra mente",
-        "lineas": 5,
+        "lineas": "5",
         "areas": "7 8",
         "keywords": "Marketing, juguetes, marcas"
     },
@@ -515,8 +515,8 @@
         "seccion": "AUD10V01-15 Proyecto de Título II",
         "guia": "Stange Marcus, Hans",
         "titulo": "Rastro Oculto: Una propuesta lúdica para el entrenamiento visual en personas con hemianopsia homónima basada en la historia y cultura de Chile",
-        "lineas": 1,
-        "areas": 8,
+        "lineas": "1",
+        "areas": "8",
         "keywords": "Exploración, Hemianopsia, Identidad, Entrenamiento visual"
     },
     {
@@ -535,8 +535,8 @@
         "seccion": "AUD10V01-17 Proyecto de Título II",
         "guia": "Zorzano Betancourt, Osvaldo",
         "titulo": "Juego de Mesa e Interculturalidad para Estudiantes",
-        "lineas": 1,
-        "areas": 5,
+        "lineas": "1",
+        "areas": "5",
         "keywords": "gamificación, interculturalidad, estudiantes"
     },
     {
@@ -546,7 +546,7 @@
         "guia": "Zorzano Betancourt, Osvaldo",
         "titulo": "Masquerade: una herramienta de apoyo para el diagnóstico de neurodivergencias",
         "lineas": "1 2",
-        "areas": 5,
+        "areas": "5",
         "keywords": "Neurodivergencia, Experiencia Ludificada, Diagnóstico"
     },
     { "nombre": "Abud Carrillo, Jenny", "carrera": "Académica/o", "lineas": "4 6", "areas": "6 7", "keywords": "" },
