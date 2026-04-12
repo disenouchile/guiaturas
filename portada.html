@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
     <head>
         <meta charset="utf-8" />
@@ -6,7 +6,10 @@
         <meta name="theme-color" content="#1f5592" />
         <meta name="author" content="Felipe Alberto Cortez Orellana" />
         <title>DISEÑO — GUIATURAS</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
         <link href="style.css" rel="stylesheet" />
     </head>
     <body class="bg-light">
@@ -35,10 +38,10 @@
             </div>
         </nav>
 
-        <div class="container pt-5">
+        <main class="container pt-5">
             <div class="row">
                 <div class="col-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
-                    <h2 class="display mt-5 mb-4"><a href="memorias.html" class="link-secondary link-opacity-75 link-offset-0 link-underline-opacity-25 link-underline-opacity-75-hover">Memorias</a>: Son 6 los datos a considerar en la portada</h2>
+                    <h2 class="display mt-5 mb-4"><a href="documentos.html" class="link-dark link-opacity-75 link-offset-1 link-underline-opacity-25 link-underline-opacity-75-hover">Memorias</a>: Son 6 los datos a considerar en la portada</h2>
                     <p>
                         Por favor lea con atención la indicación a la izquierda, y tome como referencia lo que está a la derecha. Podrá hacer las modificaciones que estime conveniente, siempre y cuando respete lo indicado para los 6 datos a
                         considerar.
@@ -109,7 +112,7 @@
                                     <td class="text-center">
                                         <p>
                                             SANTIAGO DE CHILE<br />
-                                            2024
+                                            2026
                                         </p>
                                     </td>
                                 </tr>
@@ -118,28 +121,33 @@
                     </div>
 
                     <div class="text-center my-4">
-                        <div class="btn-group btn-group-sm" role="group" aria-label="Basic outlined example">
-                            <a class="btn btn-outline-secondary" href="memorias.html">Volver</a>
+                        <div class="btn-group btn-group-lg" role="group" aria-label="Basic outlined example">
+                            <a class="btn btn-outline-secondary" href="documento.html">Volver</a>
                             <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">Rellenar</button>
                             <input class="btn btn-outline-secondary" type="button" onclick="printDiv('output')" value="Imprimir" />
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
 
-        <div class="pt-5">
+        <footer class="pt-5">
             <div class="container">
                 <div class="row">
                     <div class="col-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
                         <p class="small d-flex justify-content-between align-items-center text-body-secondary">
-                            <span><span class="d-none d-lg-inline">Desarrollado por </span><a href="https://faco.cl/profesor/" target="_blank" class="link-secondary" title="Felipe Alberto Cortez Orellana">FACO</a></span>
-                            <span><a href="mailto:coordinacion.titulo.diseno@uchilefau.cl" class="link-secondary">coordinacion.titulo.diseno@uchilefau.cl</a></span>
+                            <span>
+                                <span class="d-none d-lg-inline">Desarrollado por </span>
+                                <a href="https://faco.cl/profesor/" target="_blank" class="link-secondary" title="Felipe Alberto Cortez Orellana">FACO</a>
+                            </span>
+                            <span>
+                                <a href="mailto:jefediseno@uchilefau.cl" class="link-secondary">jefediseno@uchilefau.cl</a>
+                            </span>
                         </p>
                     </div>
                 </div>
             </div>
-        </div>
+        </footer>
 
         <!-- Para rellenar -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -191,24 +199,25 @@
                                 <input list="profe" type="text" name="guiar" class="w-100" />
                                 <datalist id="profe">
                                     <option value="Profesora Jenny Abud Carrillo"></option>
-                                    <option value="Profesora Paola Benavides Bermúdez"></option>
+                                    <option value="Profesor Patricio Araya Beltrán"></option>
+                                    <option value="Profesor Christian Basáez Villagrán"></option>
+                                    <option value="Profesor Patricio Bascuñán Correa"></option>
                                     <option value="Profesor Eduardo Castillo Espinoza"></option>
-                                    <option value="Profesor Claudio Cortés López"></option>
+                                    <option value="Profesora Magdalena Cattan Lavín"></option>
                                     <option value="Profesor Felipe Cortez Orellana"></option>
                                     <option value="Profesora Paola De la Sotta Lazzerini"></option>
                                     <option value="Profesor Pablo Domínguez González"></option>
                                     <option value="Profesor Sergio Donoso Cisternas"></option>
                                     <option value="Profesor Rodrigo Dueñas Santander"></option>
+                                    <option value="Profesor Daniel Ferrera Leiva"></option>
                                     <option value="Profesora Pamela Gatica Ramirez"></option>
                                     <option value="Profesor Cristián Gómez Moya"></option>
                                     <option value="Profesor Rubén Jacob Dazarola"></option>
                                     <option value="Profesora Lorna Lares López"></option>
                                     <option value="Profesor Félix Maldonado de la Fuente"></option>
-                                    <option value="Profesor José Marín Pacheco"></option>
                                     <option value="Profesor Iván Méndez Olivares"></option>
-                                    <option value="Profesora Clarisa Menteguiaga Schmidt"></option>
                                     <option value="Profesor Héctor Morales Morgado"></option>
-                                    <option value="Profesor Pablo Núñez Gutiérrez"></option>
+                                    <option value="Profesora Andrea Meza Navarro"></option>
                                     <option value="Profesora Verónica Ode Saleh"></option>
                                     <option value="Profesora Astrid Osorio Muñoz"></option>
                                     <option value="Profesor Roberto Osses Flores"></option>
@@ -218,13 +227,13 @@
                                     <option value="Profesora Gabriela Pradenas Guentherodt"></option>
                                     <option value="Profesor Daniel Reyes León"></option>
                                     <option value="Profesora Rebeca Silva Roquefort"></option>
+                                    <option value="Profesor Alejandro Soffia Vega"></option>
                                     <option value="Profesor Leonardo Soto Calquín"></option>
                                     <option value="Profesor Hans Stange Marcus"></option>
                                     <option value="Profesor Mauricio Tapia Reyes"></option>
                                     <option value="Profesor Rodrigo Vera Manríquez"></option>
                                     <option value="Profesor Mauricio Vico Sánchez"></option>
                                     <option value="Profesora Mitzi Vielma Laguna"></option>
-                                    <option value="Profesora Andrea Wechsler Pizarro"></option>
                                     <option value="Profesor Osvaldo Zorzano Betancourt"></option>
                                 </datalist>
                             </div>
