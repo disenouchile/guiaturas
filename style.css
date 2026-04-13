@@ -85,12 +85,12 @@ main ol {
 
 main ol li {
     list-style-position: inside;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
 }
 
 main ul li {
     list-style-position: outside;
-    margin-top: 1rem;
+    margin-top: 0.75rem;
     margin-right:2.5rem;
     font-size: 98%;
 
