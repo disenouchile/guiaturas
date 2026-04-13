@@ -22,7 +22,7 @@ em {
 /* ─── Clases de display ──────────────────────────────────── */
 
 .display {
-    font-size: calc(1.5rem + 2vw);
+    font-size: calc(1.5rem + 1.5vw + 1vh);
     font-weight: 200;
     color: hsl(212,32%,35%); /* azul UCH a la mitad de S*/
     margin-left:-0.4vw;
