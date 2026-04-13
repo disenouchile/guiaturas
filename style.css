@@ -1,6 +1,7 @@
 /* ─── Tipografía base ────────────────────────────────────── */
 
 body {
+    font-family: 'Inter', sans-serif;
     font-size: 1rem;
     line-height: 1.62;
     -webkit-font-smoothing: antialiased;
@@ -76,19 +77,23 @@ main a {
     text-underline-offset: 3px;
 }
 
+main ol {
+    margin-left: -2rem;
+    list-style-type: lower-alpha;
 
-main ol{
-margin-left: -2rem;
 }
 
-main ol li{
+main ol li {
     list-style-position: inside;
-    margin-bottom:1rem;
+    margin-bottom: 1rem;
 }
 
-main ul li{
-    list-style-position: inside;
-    margin-top:1rem;
+main ul li {
+    list-style-position: outside;
+    margin-top: 1rem;
+    margin-right:2.5rem;
+    font-size: 98%;
+
 }
 
 /* ─── Aviso ──────────────────────────────────────────────── */
@@ -174,21 +179,65 @@ a[href$=".pdf"] {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-filetype-pdf' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5L14 4.5ZM1.6 11.85H0v3.999h.791v-1.342h.803c.287 0 .531-.057.732-.173.203-.117.358-.275.463-.474a1.42 1.42 0 0 0 .161-.677c0-.25-.053-.476-.158-.677a1.176 1.176 0 0 0-.46-.477c-.2-.12-.443-.179-.732-.179Zm.545 1.333a.795.795 0 0 1-.085.38.574.574 0 0 1-.238.241.794.794 0 0 1-.375.082H.788V12.48h.66c.218 0 .389.06.512.181.123.122.185.296.185.522Zm1.217-1.333v3.999h1.46c.401 0 .734-.08.998-.237a1.45 1.45 0 0 0 .595-.689c.13-.3.196-.662.196-1.084 0-.42-.065-.778-.196-1.075a1.426 1.426 0 0 0-.589-.68c-.264-.156-.599-.234-1.005-.234H3.362Zm.791.645h.563c.248 0 .45.05.609.152a.89.89 0 0 1 .354.454c.079.201.118.452.118.753a2.3 2.3 0 0 1-.068.592 1.14 1.14 0 0 1-.196.422.8.8 0 0 1-.334.252 1.298 1.298 0 0 1-.483.082h-.563v-2.707Zm3.743 1.763v1.591h-.79V11.85h2.548v.653H7.896v1.117h1.606v.638H7.896Z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right center;
-    background-color: rgba(31,85,146,.1) /* azul uch al 10% */;
+    background-color: rgba(31, 85, 146, 0.1); /* azul uch al 10% */
     border-radius: 4px;
     padding-left: 0.25rem;
     padding-right: 1.25rem;
     text-decoration: none;
+    transition: background-color 0.2s ease;
 }
 
-a[href$=".pdf"]:hover {
+/* ─── Enlaces externos (_blank, excepto PDF) ─────────────── */
+
+a.web {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-filetype-html' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M14 4.5V11h-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zm-9.736 7.35v3.999h-.791v-1.714H1.79v1.714H1V11.85h.791v1.626h1.682V11.85h.79Zm2.251.662v3.337h-.794v-3.337H4.588v-.662h3.064v.662zm2.176 3.337v-2.66h.038l.952 2.159h.516l.946-2.16h.038v2.661h.715V11.85h-.8l-1.14 2.596H9.93L8.79 11.85h-.805v3.999zm4.71-.674h1.696v.674H12.61V11.85h.79v3.325Z'/%3E%3C/svg%3E");    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-color: rgba(31, 85, 146, 0.1); /* azul uch al 10% */
+    border-radius: 4px;
+    padding-left: 0.25rem;
+    padding-right: 1.25rem;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+a.googledocs {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-file-text' viewBox='0 0 16 16'%3E%3Cpath d='M5 4a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5M5 8a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1z'/%3E%3Cpath d='M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-color: rgba(31, 85, 146, 0.1); /* azul uch al 10% */
+    border-radius: 4px;
+    padding-left: 0.25rem;
+    padding-right: 1.25rem;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+
+/* ─── Hover compartido: PDF y externos ───────────────────── */
+
+a[href$=".pdf"]:hover,
+a.web:hover,
+a.googledocs:hover {
     background-color: #fff;
     text-decoration: underline;
-    transition: all ease 1s;
 }
 
+/* ─── Ajuste ─────────────────────────────────────────────── */
+
 .ajuste{
-    font-size:98%;
+    font-size: 99%;
     letter-spacing: 0.01rem;
-    font-weight: 400;
+}
+
+.versalita{
+    font-variant: small-caps;
+    letter-spacing: 0.025rem;
+}
+
+span.bg-white{
+    padding-left:0.3rem;
+    padding-right:0.3rem;
+    box-shadow: 0 0 1px #dedfe0;
+    border-radius: 3px;
 }
