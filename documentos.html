@@ -112,7 +112,7 @@
                                             </tr>
                                             <tr class="table-light">
                                                 <td>6</td>
-                                                <td>Índice de ilustraciones y cuadros</td>
+                                                <td>Índice de ilustraciones y cuadros</td>
                                                 <td>Carácter optativo, de acuerdo a la cantidad de ayudas ilustrativas que contenga la investigación</td>
                                             </tr>
                                             <tr>
@@ -259,7 +259,7 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-cuarta" aria-expanded="false" aria-controls="flush-cuarta">
-                                    4. bibliografía
+                                    4. bibliografía
                                 </button>
                             </h2>
                             <div id="flush-cuarta" class="accordion-collapse collapse" data-bs-parent="#acordeon">
@@ -333,7 +333,8 @@
     <ol class="mb-3">
         <li><em>Autorizar:</em> Publicación digital íntegra e inmediata.</li>
         <li><em>Embargo:</em> Se mantiene en reserva por un tiempo definido antes de su publicación digital íntegra.</li>
-<li><em>No autorizar:</em> Solo se publican digitalmente la portada, el resumen e índice; en este caso, es obligatorio dejar por escrito los antecedentes fundados para no autorizar la publicación, y también corresponde entregar una copia impresa del documento completo en Biblioteca para su consulta en sala.</li>    </ol>
+        <li><em>No autorizar:</em> Solo se publican digitalmente la portada, el resumen e índice; en este caso, es obligatorio dejar por escrito los antecedentes fundados para no autorizar la publicación, y también corresponde entregar una copia impresa del documento completo en Biblioteca para su consulta en sala.</li>
+    </ol>
 
 <p>Tras la recepción y registro, la <em>Biblioteca emite un certificado</em>. Este documento es indispensable para que la Secretaría de Estudios gestione los <a href="https://uchile.cl/t65743" target="_blank" class="link-dark web">expedientes de licenciatura y título</a>.</p>
 
@@ -385,10 +386,6 @@
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"
-            integrity="sha512-dfX5uYVXzyU8+KHqj8bjo7UkOdg18PaOtpa48djpNbZHwExddghZ+ZmzWT06R5v6NSk3ZUfsH6FNEDepLx9hPQ=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"
-        ></script>
         <script>
             document.addEventListener("scroll", (event) => {
                 document.querySelector("nav").classList.add("shadow-sm");
@@ -402,52 +399,39 @@
 
             const fila = document.querySelector("#filas");
             let todas = 0;
-            Papa.parse("https://raw.githubusercontent.com/disenoUChile/guiaturas/main/data/memorias.csv", {
-                download: true,
-                header: true,
-                complete: function (results) {
-                    console.log(results);
-                    results.data.forEach((d) => {
-                            fila.innerHTML += `<tr>
+
+            fetch("https://api.myjson.online/v1/records/9f6dff00-3886-4e90-8ca4-7894722fe678")
+                .then(res => res.json())
+                .then(json => {
+                    json.data.forEach((d) => {
+                        fila.innerHTML += `<tr>
                             <td>${d.author} (${d.year})</td>
                             <td><details><summary>${d.name}</summary>${fix(d.uri, d.title)}</details></td>
-                            <td>${guia(d.tutor_profile, d.tutor)} ${coguia(d.cotutor)} </td></tr>`;
-                        todas++; 
+                            <td>${guia(d.tutor_profile, d.tutor)} ${coguia(d.cotutor)}</td></tr>`;
+                        todas++;
                     });
 
                     function fix(x, y) {
-                        let texto;
-                        if (x.includes("http")) {
-                            texto = `<a href="${x}" class="link-secondary link-underline-opacity-10 link-underline-opacity-75-hover small" title="Ver en Repositorio Académico de la Universidad de Chile">${y}, disponible en el <em>Repositorio Académico de la Universidad de Chile</em></a>`;
-                        } else {
-                            texto = `<span class="text-body-secondary small">Esta memoria aún no está disponible en el Repositorio Académico de la Universidad de Chile</span>`;
+                        if (x && x.includes("http")) {
+                            return `<a href="${x}" class="link-secondary link-underline-opacity-10 link-underline-opacity-75-hover small" title="Ver en Repositorio Académico de la Universidad de Chile">${y}, disponible en el <em>Repositorio Académico de la Universidad de Chile</em></a>`;
                         }
-                        return texto;
+                        return `<span class="text-body-secondary small">Esta memoria aún no está disponible en el Repositorio Académico de la Universidad de Chile</span>`;
                     }
 
                     function guia(x, y) {
-                        let texto;
-                        if (x){
-                            texto = `<a href="${x}" class="link-dark link-underline-opacity-10 link-underline-opacity-75-hover" title="Ver perfil en Portafolio Académico">Prof. ${y.split(",")[1]} ${y.split(",")[0]}</a>`
-                        } else {
-                            texto = `Prof. ${y.split(",")[1]} ${y.split(",")[0]}`
+                        if (x) {
+                            return `<a href="${x}" class="link-dark link-underline-opacity-10 link-underline-opacity-75-hover" title="Ver perfil en Portafolio Académico">Prof. ${y.split(",")[1]} ${y.split(",")[0]}</a>`;
                         }
-                        return texto;
+                        return `Prof. ${y.split(",")[1]} ${y.split(",")[0]}`;
                     }
 
                     function coguia(x) {
-                        let texto;
-                        if (x){
-                            texto = ` & Prof. ${x.split(",")[1]} ${x.split(",")[0]}</a>`
-                        } else {
-                            texto = ``
-                        }
-                        return texto;
+                        return x ? ` & Prof. ${x.split(",")[1]} ${x.split(",")[0]}` : ``;
                     }
 
                     document.querySelector("#sietes").innerHTML = todas;
-                },
-            });
+                })
+                .catch(err => console.error("Error al cargar datos:", err));
         </script>
     </body>
 </html>
